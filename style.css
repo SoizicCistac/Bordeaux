@@ -264,7 +264,7 @@ a:hover {
 .news-section {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   padding: 20px 5px 20px 5px;
   margin: 20px 0px 20px 0px;
   margin-right: 10%;
