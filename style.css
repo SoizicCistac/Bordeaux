@@ -659,7 +659,7 @@ textarea {
     }
 }
 
-@media screen and (max-width:1024px) { /* Media Queries CSS Content*/
+@media screen and (max-width:1324px) { /* Media Queries CSS Content*/
   .news-section {
     flex-wrap: wrap;
   }
