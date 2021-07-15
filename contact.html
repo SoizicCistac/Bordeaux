@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Office du tourisme de Bordeaux</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/ea0048d8bb.js" crossorigin="anonymous"></script>
+<!--Leaflet CSS link for Map-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+  integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+  crossorigin=""/>
+  <!--Leaflt Script link for Map-->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""></script>
+</head>
+
+<body>
+  <div id="main">
+
+     <!-- NAVBAR SECTION -->
+     <div class="burger">
+      <div class="topbar"></div>
+      <div class="mediumbar"></div>
+      <div class="bottombar"></div>
+    </div>
+    
+    <div class="home-burger"><a href="index.html"><img class= "homeburgerimg" src="img/logobdx.png"
+      alt="logo Bordeaux métropole" /></a></div>
+
+    <nav class="navbar">
+      <div class="navbar-content"><a href="index.html"><img class="home" src="img/logobdx.png"
+            alt="logo Bordeaux métropole" /></a></div>
+      <div class="navbaralign">
+        <div class="navbar-content"><a class="menu" href="sortir.html">Sortir</a></div>
+        <div class="navbar-content"><a class="menu" href="visiter.html">Visiter</a></div>
+        <div class="navbar-content"><a class="menu" href="seloger.html">Loger</a></div>
+        <div class="navbar-content"><a href="contact.html"><i class="far fa-envelope icon-mail"></i></a></div>
+      </div>
+    </nav>
+  <div class= "notnav">
+
+      <!--MAP SECTION-->
+    <div class="office">
+      <div id ="mapid">
+
+      </div>
+      
+      <div class="adress">
+      <p class="welcome">Adresse : <br><br></p>
+      <span class="lineone">Office de Tourisme <br></span>
+      <span class="linetwo">12 cours du 30 Juillet <br></span>
+      <span class="linethree">33000 Bordeaux <br></span>
+      <span class="linefour">Tel : 05 56 00 66 00</span>
+
+      </div>
+  </div>
+
+    <!-- SECTION NOUS REJOINDRE-->
+    <div class="content">
+      <div class="line-slider-section">
+        <div style=" border-bottom: 2px solid #415672; width: 400px;">
+          <p class="welcome">Nous rejoindre</p>
+        </div>
+      </div>
+      
+      <div class="transport">
+        <div class="train">
+          <a href="https://oui.sncf"><i class="fas fa-train"></i></a> 
+          <div class="textTransport">
+            Gare Saint-Jean
+          </div>
+        </div>
+
+        <div class="avion">
+          <a href="https://www.bordeaux.aeroport.fr/"><i class="fas fa-plane"></i></a>
+          <div class="textTransport">
+            Aéroport de Mérignac
+          </div>
+        </div>
+
+        <div class="voiture">
+          <a href="https://www.viamichelin.fr/"><i class="fas fa-car-side"></i></a>
+          <div class="textTransport">
+            Trajet en voiture
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- SECTION NOUS CONTACTER-->
+    <div class="content">
+      <div class="line-slider-section">
+        <div style=" border-bottom: 2px solid #415672; width: 400px;">
+          <p class="welcome">Nous contacter</p>
+        </div>
+      </div>
+
+      <section id="contact">
+        <form id="contactForm">
+          <label for="name"></label><br />
+          <input type="text" id="name" name="name" placeholder="Nom Prénom" /><br />
+          <label for="email"></label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Votre mail"
+          /><br />
+          <label for="name"></label><br />
+          <input type="text" id="name" name="name" placeholder="Téléphone" /><br />
+          <label for="message"></label><br />
+          <textarea id="message" name="message" placeholder="Votre message..."></textarea>
+          <br /><br />
+          <input type="submit" id="submit" value="Envoyer">
+          <script>
+            const name = document.querySelector('#name');
+
+            document.getElementById("contactForm").addEventListener("submit", function (event) {
+                event.preventDefault();
+                alert(`Merci ${name.value} pour votre message, nous vous recontacterons dès que possible`);
+              });
+          </script>
+        </form>
+      </section>
+    </div>
+
+  </div>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+      <div class="container-footer">
+        <div class="content-footer">
+          <p class="hashtag">#BORDEAUXMAVILLE</p>
+        </div>
+        <div class="content-footer">
+          <img class="logo-bdx" src="img/logobdx.png" alt="Logo Facebook Bordeaux" />
+        </div>
+        <div class="content-footer">
+          <div>
+            <a href="https://www.facebook.com/bordeauxmetropole/" target="_blank"><i
+                class="fab fa-facebook-square icon-sm"></i></a>
+            <a href="https://www.instagram.com/bordeauxmaville/?hl=fr" target="_blank"><i
+                class="fab fa-instagram icon-sm"></i></a>
+            <a href="https://twitter.com/Bordeaux" target="_blank"><i class="fab fa-twitter-square icon-sm"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    </div>
+
+    <script>
+      // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+          document.getElementsByClassName("navbar").style.padding = "30px 10px";
+        } else {
+          document.getElementsByClassName("navbar").style.padding = "80px 10px";
+        }
+      }
+      //NAVBAR SCRIPT
+      let burger = document.querySelector(".burger");
+      let navbar = document.querySelector(".navbar");
+      let notnav = document.querySelector(".notnav");
+      let homeburger = document.querySelector(".home-burger");
+
+      burger.addEventListener("click", () => {
+      burger.classList.toggle("active");
+      })
+      burger.addEventListener("click", () => {
+      navbar.classList.toggle("active");
+      })
+      burger.addEventListener("click", () => {
+      notnav.classList.toggle("active");
+      })
+      burger.addEventListener("click", () => {
+      homeburger.classList.toggle("active");
+      })
+      </script>
+    <!--MAP SCRIPTS-->
+     
+    <script>
+      var mymap = L.map('mapid').setView([44.84, -0.574], 14);
+      L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+      maxZoom: 22,
+      id: 'mapbox/streets-v11',
+      accessToken: 'pk.eyJ1IjoiamVmZmVyc29uLWd1ZWdhbiIsImEiOiJja3FoNDVweGUwNDA1MnFvOXJqbzQxaXh2In0.B6BqhCczNu_lM9WxWpiqWg'
+      })
+      .addTo(mymap);
+      //MARKER
+      var officeIcon = L.icon({
+        iconUrl: "mapicons/government.png",
+        iconSize:     [20, 40], // size of the icon
+        popupAnchor:  [3, 76] // point from which the popup should open relative to the iconAnchor
+      });
+      L.marker([44.843651, -0.574360], {icon: officeIcon}).addTo(mymap)
+      .bindPopup('<img src="img/office-tourisme.jpg" alt="office de tourisme">',
+      {minWidth: 180});
+    </script>
+
+</body>
+
+</html>
