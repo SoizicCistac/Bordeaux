@@ -221,7 +221,7 @@ a:hover {
   justify-content: center;
 }
 
-img{
+.mySlides img{
   margin: 20px;
   display: block;
   margin-left: auto;
