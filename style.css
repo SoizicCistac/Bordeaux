@@ -734,12 +734,6 @@ textarea {
   .home-burger{
     display: none;
   }
-  
-  .navbar{
-    opacity: 0;
-    transform: translateY(-30px);
-    animation: apparition 0.3s 1.2s ease-out forwards;
-  }
 
   .navbaralign{
     display: flex;
