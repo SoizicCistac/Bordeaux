@@ -109,10 +109,6 @@ a{
   color: var(--primary-color);
 }
 
-a:hover {
-  font-weight: 600;
-}
-
 /* CSS Navbar */
 
 .burger{
@@ -143,6 +139,7 @@ a:hover {
 
 .menu:hover {
   color: var(--hover);
+  transition-duration: 1s;
 }
 
 .home {
@@ -164,7 +161,7 @@ a:hover {
 }
 
 .icon-mail:hover {
-  font-size: 33px;
+  transition-duration: 1s;
   color: var(--hover);
 }
 
@@ -178,7 +175,8 @@ a:hover {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding-top: 30px;
+  padding-top: 2%;
+  padding-bottom: 2%;
   opacity: 0;
   transform: translateY(-30px);
   animation: apparition 0.8s 0.2s ease-out forwards;
@@ -243,6 +241,7 @@ a:hover {
 }
 
 .active, .dot:hover {
+  transition-duration: 1s;
   background-color: #717171;
 }
 
@@ -271,7 +270,7 @@ a:hover {
   flex-direction: row;
   justify-content: center;
   padding: 20px 5px 20px 5px;
-  margin: 20px 0px 20px 0px;
+  margin: 0px 0px 20px 0px;
   margin-right: 10%;
   margin-left: 10%;
 }
@@ -347,6 +346,17 @@ a:hover {
   .news-section {
     margin-right: 0%;
     margin-left: 0%;
+  }
+}
+
+@media screen and (min-width: 824px) {
+  .img-news {
+    height: 155px;
+    width: 260px;
+    align-self: center;
+  }
+  .image-actu  {
+    background-size: cover;
   }
 }
 
@@ -444,6 +454,7 @@ button {
 button:hover {
   background-color: var(--hover);
   cursor: pointer;
+  transition-duration: 1s;
 }
 
 /* Button to top */
@@ -463,6 +474,7 @@ button:hover {
 
 #myBtn:hover {
   color: var(--hover);
+  transition-duration: 1s;
 }
 
 /* CSS Footer */
@@ -510,7 +522,7 @@ footer {
 .icon-sm:hover {
   cursor: pointer;
   color: var(--hover);
-  font-size: 40px;
+  transition-duration: 1s;
 }
 
 .logo-bdx {
@@ -649,6 +661,7 @@ textarea {
     opacity: 60%;
     color: var(--second-color);
     box-shadow: 3px 3px 3px var(--grey);
+    transition-duration: 1s;
 }
 
 @media screen and (max-width:1024px) { /* Media Queries CSS Footer*/
@@ -684,9 +697,6 @@ textarea {
     width: 150px;
   }
 
-  .image-actu {
-    width: 70%;
-  }
 
 
   .content-list {
