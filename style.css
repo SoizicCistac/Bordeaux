@@ -418,6 +418,7 @@ a{
   border-radius: 6px;
   object-fit: cover;
   overflow: hidden;
+  height: 200px;
 }
 
 .content-resume {
