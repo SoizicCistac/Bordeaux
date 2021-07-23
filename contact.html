@@ -283,7 +283,45 @@
       .bindPopup('Opéra National',
       {minWidth: 180});
 
+      //Hotels
 
+      var hotelIcon = L.icon({
+        iconUrl: "mapicons/hotels.png",
+        iconSize:     [20, 30], // size of the icon
+        popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
+      });
+
+      //Hotel 1
+
+      L.marker([44.86477, -0.55869], {icon: hotelIcon}).addTo(mymap)
+      .bindPopup('Radisson Blu Hôtel',
+      {minWidth: 180});
+
+      //Hotel 2
+
+      L.marker([44.82681, -0.54919], {icon: hotelIcon}).addTo(mymap)
+      .bindPopup('Hilton Garden Inn',
+      {minWidth: 180});
+
+      //Hotel 3
+
+      L.marker([44.83353, -0.61592], {icon: hotelIcon}).addTo(mymap)
+      .bindPopup('Shandita',
+      {minWidth: 180});
+
+      //Hotel 4
+
+      L.marker([44.82865, -0.56255], {icon: hotelIcon}).addTo(mymap)
+      .bindPopup('Hôtel La Zoologie',
+      {minWidth: 180});
+
+      //Hotel 5
+
+      L.marker([44.82672, -0.59367], {icon: hotelIcon}).addTo(mymap)
+      .bindPopup('La Maison Cachée',
+      {minWidth: 180});
+
+      
     </script>
 
 </body>
