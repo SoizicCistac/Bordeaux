@@ -185,7 +185,7 @@
     <!--MAP SCRIPTS-->
      
     <script>
-      var mymap = L.map('mapid').setView([44.84, -0.574], 14);
+      var mymap = L.map('mapid').setView([44.84, -0.574], 13);
       L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
       maxZoom: 22,
@@ -193,15 +193,74 @@
       accessToken: 'pk.eyJ1IjoiamVmZmVyc29uLWd1ZWdhbiIsImEiOiJja3FoNDVweGUwNDA1MnFvOXJqbzQxaXh2In0.B6BqhCczNu_lM9WxWpiqWg'
       })
       .addTo(mymap);
-      //MARKER
+
+      //MARKERS
+
+      //Visitor Center
+
       var officeIcon = L.icon({
         iconUrl: "mapicons/government.png",
-        iconSize:     [20, 40], // size of the icon
-        popupAnchor:  [3, 76] // point from which the popup should open relative to the iconAnchor
+        iconSize:     [20, 30], // size of the icon
+        popupAnchor:  [0, 15] // point from which the popup should open relative to the iconAnchor
       });
       L.marker([44.843651, -0.574360], {icon: officeIcon}).addTo(mymap)
       .bindPopup('<img src="img/office-tourisme.jpg" alt="office de tourisme">',
       {minWidth: 180});
+
+      // Restaurants
+
+      var restoIcon = L.icon({
+        iconUrl: "mapicons/restaurants.png",
+        iconSize:     [20, 30], // size of the icon
+        popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
+      });
+
+      // Resto 1
+
+      L.marker([44.84096, -0.57157], {icon: restoIcon}).addTo(mymap)
+      .bindPopup('Chez Jean',
+      {minWidth: 180});
+
+      //Resto 2
+
+      L.marker([44.85475, -0.56975], {icon: restoIcon}).addTo(mymap)
+      .bindPopup('The Golden Apple',
+      {minWidth: 180});
+
+      //Resto 3
+
+      L.marker([44.84294, -0.57812], {icon: restoIcon}).addTo(mymap)
+      .bindPopup('Le Chapon Fin',
+      {minWidth: 180});
+
+      // Resto 4
+
+      L.marker([44.83719, -0.57865], {icon: restoIcon}).addTo(mymap)
+      .bindPopup('Le Bistro du musée',
+      {minWidth: 180});
+
+      //Resto 5
+
+      L.marker([44.83949, -0.57050], {icon: restoIcon}).addTo(mymap)
+      .bindPopup('Ô p\'tit Bahut',
+      {minWidth: 180});
+
+      //Museums
+
+      var museumIcon = L.icon({
+        iconUrl: "mapicons/museums.png",
+        iconSize:     [20, 30], // size of the icon
+        popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
+      });
+
+      //Museum 1
+
+      L.marker([44.83756, -0.58058], {icon: museumIcon}).addTo(mymap)
+      .bindPopup('Musée des Beaux Arts',
+      {minWidth: 180});
+
+
+
     </script>
 
 </body>
