@@ -199,7 +199,7 @@
       //Visitor Center
 
       var officeIcon = L.icon({
-        iconUrl: "mapicons/government.png",
+        iconUrl: "mapicons/residential-places.png",
         iconSize:     [20, 30], // size of the icon
         popupAnchor:  [0, 15] // point from which the popup should open relative to the iconAnchor
       });
@@ -259,6 +259,29 @@
       .bindPopup('Musée des Beaux Arts',
       {minWidth: 180});
 
+      //Museum 2
+
+      L.marker([44.86239, -0.54996], {icon: museumIcon}).addTo(mymap)
+      .bindPopup('Cité du Vin',
+      {minWidth: 180});
+
+      //Museum 3
+
+      L.marker([44.84148, -0.57081], {icon: museumIcon}).addTo(mymap)
+      .bindPopup('Place de la Bourse',
+      {minWidth: 180});
+
+      //Museum 4
+
+      L.marker([44.83773, -0.57766], {icon: museumIcon}).addTo(mymap)
+      .bindPopup('Cathédrale Saint André de Bordeaux',
+      {minWidth: 180});
+
+      //Museum 5
+
+      L.marker([44.84270, -0.57418], {icon: museumIcon}).addTo(mymap)
+      .bindPopup('Opéra National',
+      {minWidth: 180});
 
 
     </script>
